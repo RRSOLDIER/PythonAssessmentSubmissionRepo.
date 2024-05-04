@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Saved Repositories</h1>
+  <ul>
+    {% for repo in repos %}
+      <li>
+        <strong>{{ repo.name }}</strong>by {{ repo.owner }}
+        <br>
+        {{ repo.description }}<br>
+
+        ★ {{ repo.stars }} | Forks: {{ repo.forks }}
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Welcome to the GitHub Repository Search</h1>
+  <form method="get" action="{% url 'search' %}">
+    <input type="text" name="q" placeholder="Search for repositories" required>
+    <button type="submit">Search</button>
+  </form>
+{% endblock %}
